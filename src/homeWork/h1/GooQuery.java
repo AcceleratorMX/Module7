@@ -4,7 +4,8 @@ class GooQuery {
     private String language;
     private String text;
     public GooQuery(String language, String text) {
-
+            this.language = language;
+            this.text = text;
     }
 
     public String getLanguage() {
@@ -17,10 +18,7 @@ class GooQuery {
 
     @Override
     public String toString() {
-        return "GooQuery{" +
-                "language='" + language + '\'' +
-                ", text='" + text + '\'' +
-                '}';
+        return "Searching [" + text + "], using language: " + language;
     }
 }
 
