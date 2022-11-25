@@ -11,7 +11,13 @@ class GooSearchResult {
     public String getUrl() {
         return url;
     }
+
+    public String parseDomain() {
+        String [] str = url.split("//");
+        return str[1].split("/")[0];
+    }
 }
+
 
 class GooSearchResultTest {
     public static void main(String[] args) {
