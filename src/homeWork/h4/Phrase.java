@@ -1,6 +1,5 @@
 package src.homeWork.h4;
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
 class Phrase {
     private final String[] words;
@@ -8,12 +7,12 @@ class Phrase {
 
     public Phrase(String[] words) {
         this.words = words;
-        newWords = new String[0];
+        newWords = Arrays.copyOf(words,words.length);
     }
 
     @Override
     public String toString() {
-        return String.join(" ", words);
+        return String.join(" ", newWords);
     }
 }
 

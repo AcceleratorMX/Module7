@@ -28,12 +28,12 @@ public class PersonTest {
         System.out.println("input.toLowerCase() = " + input.toLowerCase());
 
 //        Взяти підрядок з рядка
-        String fullName = "Ivanov Ivan Ivanuch";
-        char[] nameChars = fullName.toCharArray();
-        int firstWhitespace = 0;
-        for (int i = 0; i < nameChars.length; i++) {
-            if (String.valueOf(nameChars[i]).equals(" "));
-            firstWhitespace = i;
+            String fullName = "Ivanov Ivan Ivanuch";
+            char[] nameChars = fullName.toCharArray();
+            int firstWhitespace = 0;
+            for (int i = 0; i < nameChars.length; i++) {
+                if (String.valueOf(nameChars[i]).equals(" "));
+                firstWhitespace = i;
             break;
         }
         System.out.println("fullName.substring(0,x) = " + fullName.substring(0, firstWhitespace));
