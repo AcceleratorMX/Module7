@@ -1,8 +1,17 @@
 package src.homeWork.h6;
 
-public class PunctuationMarkCounter {
-    public int count(String phrase) {
+import java.util.Arrays;
 
+class PunctuationMarkCounter {
+    public int count(String phrase) {
+        String[] words = phrase.split("");
+        int count = 0;
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].equals(".") || words[i].equals(",") || words[i].equals("!") || words[i].equals(":") || words[i].equals(";")){
+                count ++;
+            }
+        }
+        return count;
     }
 }
 
