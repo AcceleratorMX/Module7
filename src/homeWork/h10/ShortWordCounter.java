@@ -2,15 +2,13 @@ package src.homeWork.h10;
 
 import java.util.Arrays;
 
-public class ShortWordCounter{
+class ShortWordCounter{
     public int count(String phrase, int minLength){
-        String[] str = phrase.split("");
-        int count = 0;
+        String[] str = phrase.split(" ");
         int result = 0;
-        for (int i = 1; i < str.length; i++) {
-                count++;
-            if (count <= minLength) {
-                result += count;
+        for (int i = 0; i < str.length; i++) {
+            if (str[i].length() <= minLength) {
+                result ++;
             }
         }
         return result;

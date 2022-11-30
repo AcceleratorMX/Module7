@@ -1,4 +1,4 @@
-package task;
+package task13;
 
 public class WordDeleter {
     public static void main(String[] args) {
