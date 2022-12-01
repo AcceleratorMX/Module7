@@ -3,15 +3,17 @@ package src.homeWork.h19;
 import java.util.Arrays;
 
 class DigitExtracter {
-    public int[] extract(String text) {
-        String[] str = text.split("\\d+/");
-        int[] result = new int[str.length];
-        for (int i = 0; i < str.length; i++) {
-            if (!str[i].matches("\\w+")) {
-                result[i] = Integer.parseInt(str[i]);
-            }
+
+    public int[] extract(String text){
+        text = text.replaceAll("[^\\d]+", "");
+        char[] chars = text.toCharArray();
+        int[] result = new int[chars.length];
+
+        for (int i = 0; i < chars.length; i++){
+            result[i] = chars[i] - '0';
         }
-        return new int[]{result.length};
+
+        return result;
     }
 }
 class DigitExtracterTest {
