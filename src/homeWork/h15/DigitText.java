@@ -1,11 +1,11 @@
 package src.homeWork.h15;
 
-public class DigitText {
+class DigitText {
     public boolean detect(String text){
         String[] str = text.toLowerCase().split("");
         for (int i = 0; i < str.length; i++) {
-            String s = "\\[a-z]";
-            if (str[i].equals(s)) {
+            String s = "[a-zA-Z]+";
+            if (str[i].matches(s)) {
                 return false;
             }
         }
