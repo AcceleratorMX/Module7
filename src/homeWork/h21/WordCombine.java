@@ -1,8 +1,15 @@
 package src.homeWork.h21;
 
-public class WordCombine {
+import java.util.Arrays;
+
+class WordCombine {
     public boolean canCombine(String sourceWord, String targetWord){
 
+        boolean value = false;
+        for (char s : targetWord.toCharArray()) {
+            if(sourceWord.toLowerCase().contains(String.valueOf(s).toLowerCase())) {return true;}
+        }
+        return value;
     }
 }
 
